@@ -1,0 +1,9 @@
+[package]
+name = "chafa-sys"
+version = "0.1.0"
+edition = "2021"
+links = "chafa"
+
+[build-dependencies]
+bindgen = "0.69.1"
+pkg-config = "0.3.27"
