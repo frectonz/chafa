@@ -82,9 +82,27 @@ mod tests {
             symbol_map
         };
 
+        let (terminal_size::Width(cols), terminal_size::Height(rows)) =
+            terminal_size::terminal_size().expect("couldn't get term width and height");
+
+        let width_ptr: *mut i32 = &mut (cols as i32);
+        let height_ptr: *mut i32 = &mut (rows as i32);
+
+        unsafe {
+            crate::chafa_calc_canvas_geometry(
+                img.width() as i32,
+                img.height() as i32,
+                width_ptr,
+                height_ptr,
+                0.5,
+                false.into(),
+                false.into(),
+            );
+        }
+
         let config = unsafe {
             let config = crate::chafa_canvas_config_new();
-            crate::chafa_canvas_config_set_geometry(config, 40, 20);
+            crate::chafa_canvas_config_set_geometry(config, *width_ptr, *height_ptr);
             crate::chafa_canvas_config_set_symbol_map(config, symbol_map);
             config
         };
