@@ -3,6 +3,10 @@ name = "chafa-sys"
 version = "0.1.0"
 edition = "2021"
 links = "chafa"
+authors = ["frectonz"]
+license = "MIT"
+homepage = "https://github.com/frectonz/chafa"
+description = "FFI bindings to Chafa"
 
 [build-dependencies]
 bindgen = "0.69.1"
