@@ -1,0 +1,953 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ChafaSymbolMap: Chafa Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Chafa Reference Manual">
+<link rel="up" href="ch02.html" title="Chafa C API">
+<link rel="prev" href="chafa-ChafaCanvasConfig.html" title="ChafaCanvasConfig">
+<link rel="next" href="chafa-ChafaTermDb.html" title="ChafaTermDb">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#chafa-ChafaSymbolMap.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="chafa-ChafaCanvasConfig.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="chafa-ChafaTermDb.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="chafa-ChafaSymbolMap"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="chafa-ChafaSymbolMap.top_of_page"></a>ChafaSymbolMap</span></h2>
+<p>ChafaSymbolMap — Describes a selection of textual symbols</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="chafa-ChafaSymbolMap.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="returnvalue">ChafaSymbolMap</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-new" title="chafa_symbol_map_new ()">chafa_symbol_map_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="returnvalue">ChafaSymbolMap</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-copy" title="chafa_symbol_map_copy ()">chafa_symbol_map_copy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-ref" title="chafa_symbol_map_ref ()">chafa_symbol_map_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-unref" title="chafa_symbol_map_unref ()">chafa_symbol_map_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-add-by-tags" title="chafa_symbol_map_add_by_tags ()">chafa_symbol_map_add_by_tags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-add-by-range" title="chafa_symbol_map_add_by_range ()">chafa_symbol_map_add_by_range</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-remove-by-tags" title="chafa_symbol_map_remove_by_tags ()">chafa_symbol_map_remove_by_tags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-remove-by-range" title="chafa_symbol_map_remove_by_range ()">chafa_symbol_map_remove_by_range</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-apply-selectors" title="chafa_symbol_map_apply_selectors ()">chafa_symbol_map_apply_selectors</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-get-allow-builtin-glyphs" title="chafa_symbol_map_get_allow_builtin_glyphs ()">chafa_symbol_map_get_allow_builtin_glyphs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-set-allow-builtin-glyphs" title="chafa_symbol_map_set_allow_builtin_glyphs ()">chafa_symbol_map_set_allow_builtin_glyphs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-get-glyph" title="chafa_symbol_map_get_glyph ()">chafa_symbol_map_get_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-add-glyph" title="chafa_symbol_map_add_glyph ()">chafa_symbol_map_add_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="chafa-ChafaSymbolMap.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-WIDTH-PIXELS:CAPS" title="CHAFA_SYMBOL_WIDTH_PIXELS">CHAFA_SYMBOL_WIDTH_PIXELS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-HEIGHT-PIXELS:CAPS" title="CHAFA_SYMBOL_HEIGHT_PIXELS">CHAFA_SYMBOL_HEIGHT_PIXELS</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolTags" title="enum ChafaSymbolTags">ChafaSymbolTags</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap">ChafaSymbolMap</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="chafa-ChafaSymbolMap.description"></a><h2>Description</h2>
+<p>A <a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> describes a selection of the supported textual symbols
+that can be used in building a printable output string from a <a class="link" href="chafa-ChafaCanvas.html#ChafaCanvas" title="ChafaCanvas"><span class="type">ChafaCanvas</span></a>.</p>
+<p>To create a new <a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a>, use <a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-new" title="chafa_symbol_map_new ()"><code class="function">chafa_symbol_map_new()</code></a>. You can then
+add symbols to it using <a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-add-by-tags" title="chafa_symbol_map_add_by_tags ()"><code class="function">chafa_symbol_map_add_by_tags()</code></a> before copying
+it into a <a class="link" href="chafa-ChafaCanvasConfig.html#ChafaCanvasConfig" title="ChafaCanvasConfig"><span class="type">ChafaCanvasConfig</span></a> using <a class="link" href="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-symbol-map" title="chafa_canvas_config_set_symbol_map ()"><code class="function">chafa_canvas_config_set_symbol_map()</code></a>.</p>
+<p>Note that some symbols match multiple tags, so it makes sense to e.g.
+add symbols matching <a class="link" href="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-BORDER:CAPS"><span class="type">CHAFA_SYMBOL_TAG_BORDER</span></a> and then removing symbols
+matching <a class="link" href="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-DIAGONAL:CAPS"><span class="type">CHAFA_SYMBOL_TAG_DIAGONAL</span></a>.</p>
+<p>The number of available symbols is a significant factor in the speed of
+<a class="link" href="chafa-ChafaCanvas.html#ChafaCanvas" title="ChafaCanvas"><span class="type">ChafaCanvas</span></a>. For the fastest possible operation you could use a single
+symbol -- <a class="link" href="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-VHALF:CAPS"><span class="type">CHAFA_SYMBOL_TAG_VHALF</span></a> works well by itself.</p>
+</div>
+<div class="refsect1">
+<a name="chafa-ChafaSymbolMap.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="chafa-symbol-map-new"></a><h3>chafa_symbol_map_new ()</h3>
+<pre class="programlisting"><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="returnvalue">ChafaSymbolMap</span></a> *
+chafa_symbol_map_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> representing a set of Unicode symbols. The
+symbol map starts out empty.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-new.returns"></a><h4>Returns</h4>
+<p> The new symbol map</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-copy"></a><h3>chafa_symbol_map_copy ()</h3>
+<pre class="programlisting"><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="returnvalue">ChafaSymbolMap</span></a> *
+chafa_symbol_map_copy (<em class="parameter"><code>const <a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>);</pre>
+<p>Creates a new <a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> that's a copy of <em class="parameter"><code>symbol_map</code></em>
+.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-copy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>A <a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> to copy.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="chafa-symbol-map-copy.returns"></a><h4>Returns</h4>
+<p> The new <a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-ref"></a><h3>chafa_symbol_map_ref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+chafa_symbol_map_ref (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>);</pre>
+<p>Adds a reference to <em class="parameter"><code>symbol_map</code></em>
+.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>Symbol map to add a reference to</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-unref"></a><h3>chafa_symbol_map_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+chafa_symbol_map_unref (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>);</pre>
+<p>Removes a reference from <em class="parameter"><code>symbol_map</code></em>
+. When remaining references drops to
+zero, the symbol map is freed and can no longer be used.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>Symbol map to remove a reference from</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-add-by-tags"></a><h3>chafa_symbol_map_add_by_tags ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+chafa_symbol_map_add_by_tags (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>,
+                              <em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolTags" title="enum ChafaSymbolTags"><span class="type">ChafaSymbolTags</span></a> tags</code></em>);</pre>
+<p>Adds symbols matching the set of <em class="parameter"><code>tags</code></em>
+ to <em class="parameter"><code>symbol_map</code></em>
+.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-add-by-tags.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>Symbol map to add symbols to</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tags</p></td>
+<td class="parameter_description"><p>Selector tags for symbols to add</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-add-by-range"></a><h3>chafa_symbol_map_add_by_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+chafa_symbol_map_add_by_range (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Unicode-Manipulation.html#gunichar"><span class="type">gunichar</span></a> first</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Unicode-Manipulation.html#gunichar"><span class="type">gunichar</span></a> last</code></em>);</pre>
+<p>Adds symbols in the code point range starting with <em class="parameter"><code>first</code></em>
+
+and ending with <em class="parameter"><code>last</code></em>
+ to <em class="parameter"><code>symbol_map</code></em>
+.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-add-by-range.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>Symbol map to add symbols to</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first</p></td>
+<td class="parameter_description"><p>First code point to add, inclusive</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>last</p></td>
+<td class="parameter_description"><p>Last code point to add, inclusive</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-remove-by-tags"></a><h3>chafa_symbol_map_remove_by_tags ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+chafa_symbol_map_remove_by_tags (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>,
+                                 <em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolTags" title="enum ChafaSymbolTags"><span class="type">ChafaSymbolTags</span></a> tags</code></em>);</pre>
+<p>Removes symbols matching the set of <em class="parameter"><code>tags</code></em>
+ from <em class="parameter"><code>symbol_map</code></em>
+.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-remove-by-tags.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>Symbol map to remove symbols from</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tags</p></td>
+<td class="parameter_description"><p>Selector tags for symbols to remove</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-remove-by-range"></a><h3>chafa_symbol_map_remove_by_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+chafa_symbol_map_remove_by_range (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Unicode-Manipulation.html#gunichar"><span class="type">gunichar</span></a> first</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Unicode-Manipulation.html#gunichar"><span class="type">gunichar</span></a> last</code></em>);</pre>
+<p>Removes symbols in the code point range starting with <em class="parameter"><code>first</code></em>
+
+and ending with <em class="parameter"><code>last</code></em>
+ from <em class="parameter"><code>symbol_map</code></em>
+.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-remove-by-range.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>Symbol map to remove symbols from</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first</p></td>
+<td class="parameter_description"><p>First code point to remove, inclusive</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>last</p></td>
+<td class="parameter_description"><p>Last code point to remove, inclusive</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-apply-selectors"></a><h3>chafa_symbol_map_apply_selectors ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+chafa_symbol_map_apply_selectors (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selectors</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses a string consisting of symbol tags separated by [+-,] and
+applies the pattern to <em class="parameter"><code>symbol_map</code></em>
+. If the string begins with + or -,
+it's understood to be relative to the current set in <em class="parameter"><code>symbol_map</code></em>
+,
+otherwise the map is cleared first.</p>
+<p>The symbol tags are string versions of <a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolTags" title="enum ChafaSymbolTags"><span class="type">ChafaSymbolTags</span></a>, i.e.
+[all, none, space, solid, stipple, block, border, diagonal, dot,
+quad, half, hhalf, vhalf, braille, technical, geometric, ascii,
+extra].</p>
+<p>Examples: "block,border" sets map to contain symbols matching either
+of those tags. "+block,border-dot,stipple" adds block and border
+symbols then removes dot and stipple symbols.</p>
+<p>If there is a parse error, none of the changes are applied.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-apply-selectors.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>Symbol map to apply selection to</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>selectors</p></td>
+<td class="parameter_description"><p>A string specifying selections</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for an error, or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="chafa-symbol-map-apply-selectors.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if there was a parse error</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-get-allow-builtin-glyphs"></a><h3>chafa_symbol_map_get_allow_builtin_glyphs ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+chafa_symbol_map_get_allow_builtin_glyphs
+                               (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>);</pre>
+<p>Queries whether a symbol map is allowed to use built-in glyphs for
+symbol selection. This can be turned off if you want to use your
+own glyphs exclusively (see <a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-add-glyph" title="chafa_symbol_map_add_glyph ()"><code class="function">chafa_symbol_map_add_glyph()</code></a>).</p>
+<p>Defaults to <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-get-allow-builtin-glyphs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>A symbol map</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="chafa-symbol-map-get-allow-builtin-glyphs.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if built-in glyphs are allowed</p>
+</div>
+<p class="since">Since: 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-set-allow-builtin-glyphs"></a><h3>chafa_symbol_map_set_allow_builtin_glyphs ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+chafa_symbol_map_set_allow_builtin_glyphs
+                               (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_builtin_glyphs</code></em>);</pre>
+<p>Controls whether a symbol map is allowed to use built-in glyphs for
+symbol selection. This can be turned off if you want to use your
+own glyphs exclusively (see <a class="link" href="chafa-ChafaSymbolMap.html#chafa-symbol-map-add-glyph" title="chafa_symbol_map_add_glyph ()"><code class="function">chafa_symbol_map_add_glyph()</code></a>).</p>
+<p>Defaults to <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-set-allow-builtin-glyphs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>A symbol map</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>use_builtin_glyphs</p></td>
+<td class="parameter_description"><p>A boolean indicating whether to use built-in glyphs</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-get-glyph"></a><h3>chafa_symbol_map_get_glyph ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+chafa_symbol_map_get_glyph (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Unicode-Manipulation.html#gunichar"><span class="type">gunichar</span></a> code_point</code></em>,
+                            <em class="parameter"><code><a class="link" href="chafa-Miscellaneous.html#ChafaPixelType" title="enum ChafaPixelType"><span class="type">ChafaPixelType</span></a> pixel_format</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> *pixels_out</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *width_out</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *height_out</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *rowstride_out</code></em>);</pre>
+<p>Returns data for the glyph corresponding to <em class="parameter"><code>code_point</code></em>
+ stored in <em class="parameter"><code>symbol_map</code></em>
+.
+Any of <em class="parameter"><code>pixels_out</code></em>
+, <em class="parameter"><code>width_out</code></em>
+, <em class="parameter"><code>height_out</code></em>
+ and <em class="parameter"><code>rowstride_out</code></em>
+ can be NULL,
+in which case the corresponding data is not retrieved.</p>
+<p>If <em class="parameter"><code>pixels_out</code></em>
+ is not NULL, a pointer to freshly allocated memory containing
+height * rowstride bytes in the pixel format specified by <em class="parameter"><code>pixel_format</code></em>
+
+will be stored at this address. It must be freed using <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when you're
+done with it.</p>
+<p>Monochrome glyphs (the only kind currently supported) will be rendered as
+opaque white on a transparent black background (0xffffffff for inked
+pixels and 0x00000000 for uninked).</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-get-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>A symbol map</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>code_point</p></td>
+<td class="parameter_description"><p>A Unicode code point</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pixel_format</p></td>
+<td class="parameter_description"><p>Desired pixel format of <em class="parameter"><code>pixels_out</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pixels_out</p></td>
+<td class="parameter_description"><p>Storage for a pointer to exported glyph data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width_out</p></td>
+<td class="parameter_description"><p>Storage for width of glyph, in pixels</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height_out</p></td>
+<td class="parameter_description"><p>Storage for height of glyph, in pixels</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rowstride_out</p></td>
+<td class="parameter_description"><p>Storage for offset from start of one row to the next, in bytes</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 1.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chafa-symbol-map-add-glyph"></a><h3>chafa_symbol_map_add_glyph ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+chafa_symbol_map_add_glyph (<em class="parameter"><code><a class="link" href="chafa-ChafaSymbolMap.html#ChafaSymbolMap" title="ChafaSymbolMap"><span class="type">ChafaSymbolMap</span></a> *symbol_map</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Unicode-Manipulation.html#gunichar"><span class="type">gunichar</span></a> code_point</code></em>,
+                            <em class="parameter"><code><a class="link" href="chafa-Miscellaneous.html#ChafaPixelType" title="enum ChafaPixelType"><span class="type">ChafaPixelType</span></a> pixel_format</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> pixels</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> width</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> height</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> rowstride</code></em>);</pre>
+<p>Assigns a rendered glyph to a Unicode code point. This tells Chafa what the
+glyph looks like so the corresponding symbol can be used appropriately in
+output.</p>
+<p>Assigned glyphs override built-in glyphs and any earlier glyph that may
+have been assigned to the same code point.</p>
+<p>If the input is in a format with an alpha channel, the alpha channel will
+be used for the shape. If not, an average of the color channels will be used.</p>
+<div class="refsect3">
+<a name="chafa-symbol-map-add-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>symbol_map</p></td>
+<td class="parameter_description"><p>A symbol map</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>code_point</p></td>
+<td class="parameter_description"><p>The Unicode code point for this glyph</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pixel_format</p></td>
+<td class="parameter_description"><p>Glyph pixel format of <em class="parameter"><code>pixels</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pixels</p></td>
+<td class="parameter_description"><p>The glyph data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>Width of glyph, in pixels</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>Height of glyph, in pixels</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rowstride</p></td>
+<td class="parameter_description"><p>Offset from start of one row to the next, in bytes</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 1.4</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="chafa-ChafaSymbolMap.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="CHAFA-SYMBOL-WIDTH-PIXELS:CAPS"></a><h3>CHAFA_SYMBOL_WIDTH_PIXELS</h3>
+<pre class="programlisting">#define CHAFA_SYMBOL_WIDTH_PIXELS 8
+</pre>
+<p>The width of an internal symbol pixel matrix. If you are prescaling
+input graphics, you will get the best results when scaling to a
+multiple of this value.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CHAFA-SYMBOL-HEIGHT-PIXELS:CAPS"></a><h3>CHAFA_SYMBOL_HEIGHT_PIXELS</h3>
+<pre class="programlisting">#define CHAFA_SYMBOL_HEIGHT_PIXELS 8
+</pre>
+<p>The height of an internal symbol pixel matrix. If you are prescaling
+input graphics, you will get the best results when scaling to a
+multiple of this value.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChafaSymbolTags"></a><h3>enum ChafaSymbolTags</h3>
+<div class="refsect3">
+<a name="ChafaSymbolTags.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-NONE:CAPS"></a>CHAFA_SYMBOL_TAG_NONE</p></td>
+<td class="enum_member_description">
+<p>Special value meaning no symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-SPACE:CAPS"></a>CHAFA_SYMBOL_TAG_SPACE</p></td>
+<td class="enum_member_description">
+<p>Space.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-SOLID:CAPS"></a>CHAFA_SYMBOL_TAG_SOLID</p></td>
+<td class="enum_member_description">
+<p>Solid (inverse of space).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-STIPPLE:CAPS"></a>CHAFA_SYMBOL_TAG_STIPPLE</p></td>
+<td class="enum_member_description">
+<p>Stipple symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-BLOCK:CAPS"></a>CHAFA_SYMBOL_TAG_BLOCK</p></td>
+<td class="enum_member_description">
+<p>Block symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-BORDER:CAPS"></a>CHAFA_SYMBOL_TAG_BORDER</p></td>
+<td class="enum_member_description">
+<p>Border symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-DIAGONAL:CAPS"></a>CHAFA_SYMBOL_TAG_DIAGONAL</p></td>
+<td class="enum_member_description">
+<p>Diagonal border symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-DOT:CAPS"></a>CHAFA_SYMBOL_TAG_DOT</p></td>
+<td class="enum_member_description">
+<p>Symbols that look like isolated dots (excluding Braille).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-QUAD:CAPS"></a>CHAFA_SYMBOL_TAG_QUAD</p></td>
+<td class="enum_member_description">
+<p>Quadrant block symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-HHALF:CAPS"></a>CHAFA_SYMBOL_TAG_HHALF</p></td>
+<td class="enum_member_description">
+<p>Horizontal half block symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-VHALF:CAPS"></a>CHAFA_SYMBOL_TAG_VHALF</p></td>
+<td class="enum_member_description">
+<p>Vertical half block symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-HALF:CAPS"></a>CHAFA_SYMBOL_TAG_HALF</p></td>
+<td class="enum_member_description">
+<p>Joint set of horizontal and vertical halves.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-INVERTED:CAPS"></a>CHAFA_SYMBOL_TAG_INVERTED</p></td>
+<td class="enum_member_description">
+<p>Symbols that are the inverse of simpler symbols. When two symbols complement each other, only one will have this tag.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-BRAILLE:CAPS"></a>CHAFA_SYMBOL_TAG_BRAILLE</p></td>
+<td class="enum_member_description">
+<p>Braille symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-TECHNICAL:CAPS"></a>CHAFA_SYMBOL_TAG_TECHNICAL</p></td>
+<td class="enum_member_description">
+<p>Miscellaneous technical symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-GEOMETRIC:CAPS"></a>CHAFA_SYMBOL_TAG_GEOMETRIC</p></td>
+<td class="enum_member_description">
+<p>Geometric shapes.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-ASCII:CAPS"></a>CHAFA_SYMBOL_TAG_ASCII</p></td>
+<td class="enum_member_description">
+<p>Printable ASCII characters.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-ALPHA:CAPS"></a>CHAFA_SYMBOL_TAG_ALPHA</p></td>
+<td class="enum_member_description">
+<p>Letters.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-DIGIT:CAPS"></a>CHAFA_SYMBOL_TAG_DIGIT</p></td>
+<td class="enum_member_description">
+<p>Digits.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-ALNUM:CAPS"></a>CHAFA_SYMBOL_TAG_ALNUM</p></td>
+<td class="enum_member_description">
+<p>Joint set of letters and digits.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-NARROW:CAPS"></a>CHAFA_SYMBOL_TAG_NARROW</p></td>
+<td class="enum_member_description">
+<p>Characters that are one cell wide.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-WIDE:CAPS"></a>CHAFA_SYMBOL_TAG_WIDE</p></td>
+<td class="enum_member_description">
+<p>Characters that are two cells wide.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-AMBIGUOUS:CAPS"></a>CHAFA_SYMBOL_TAG_AMBIGUOUS</p></td>
+<td class="enum_member_description">
+<p>Characters of uncertain width. Always excluded unless specifically asked for.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-UGLY:CAPS"></a>CHAFA_SYMBOL_TAG_UGLY</p></td>
+<td class="enum_member_description">
+<p>Characters that are generally undesired or unlikely to render well. Always excluded unless specifically asked for.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-LEGACY:CAPS"></a>CHAFA_SYMBOL_TAG_LEGACY</p></td>
+<td class="enum_member_description">
+<p>Legacy computer symbols, including sextants, wedges and more.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-SEXTANT:CAPS"></a>CHAFA_SYMBOL_TAG_SEXTANT</p></td>
+<td class="enum_member_description">
+<p>Sextant 2x3 mosaics.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-WEDGE:CAPS"></a>CHAFA_SYMBOL_TAG_WEDGE</p></td>
+<td class="enum_member_description">
+<p>Wedge shapes that align with sextants.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-LATIN:CAPS"></a>CHAFA_SYMBOL_TAG_LATIN</p></td>
+<td class="enum_member_description">
+<p>Latin and Latin-like symbols (superset of ASCII).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-EXTRA:CAPS"></a>CHAFA_SYMBOL_TAG_EXTRA</p></td>
+<td class="enum_member_description">
+<p>Symbols not in any other category.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-BAD:CAPS"></a>CHAFA_SYMBOL_TAG_BAD</p></td>
+<td class="enum_member_description">
+<p>Joint set of ugly and ambiguous characters. Always excluded unless specifically asked for.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAFA-SYMBOL-TAG-ALL:CAPS"></a>CHAFA_SYMBOL_TAG_ALL</p></td>
+<td class="enum_member_description">
+<p>Special value meaning all supported symbols.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChafaSymbolMap"></a><h3>ChafaSymbolMap</h3>
+<pre class="programlisting">typedef struct ChafaSymbolMap ChafaSymbolMap;
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

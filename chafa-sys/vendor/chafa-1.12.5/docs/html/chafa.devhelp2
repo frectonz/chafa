@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="Chafa Reference Manual" link="index.html" author="" name="chafa" version="2" language="c" online="https://hpjansson.org/chafa/ref/index.html">
+  <chapters>
+    <sub name="Overview" link="ch01.html">
+      <sub name="Compiling the Chafa package" link="chafa-building.html"/>
+      <sub name="Using Chafa in your Application" link="chafa-using.html"/>
+    </sub>
+    <sub name="Chafa C API" link="ch02.html">
+      <sub name="ChafaCanvas" link="chafa-ChafaCanvas.html"/>
+      <sub name="ChafaCanvasConfig" link="chafa-ChafaCanvasConfig.html"/>
+      <sub name="ChafaSymbolMap" link="chafa-ChafaSymbolMap.html"/>
+      <sub name="ChafaTermDb" link="chafa-ChafaTermDb.html"/>
+      <sub name="ChafaTermInfo" link="chafa-ChafaTermInfo.html"/>
+      <sub name="Features" link="chafa-Features.html"/>
+      <sub name="Miscellaneous" link="chafa-Miscellaneous.html"/>
+    </sub>
+    <sub name="API Index" link="api-index-full.html"/>
+  </chapters>
+  <functions>
+    <keyword type="function" name="chafa_canvas_new ()" link="chafa-ChafaCanvas.html#chafa-canvas-new"/>
+    <keyword type="function" name="chafa_canvas_new_similar ()" link="chafa-ChafaCanvas.html#chafa-canvas-new-similar"/>
+    <keyword type="function" name="chafa_canvas_ref ()" link="chafa-ChafaCanvas.html#chafa-canvas-ref"/>
+    <keyword type="function" name="chafa_canvas_unref ()" link="chafa-ChafaCanvas.html#chafa-canvas-unref"/>
+    <keyword type="function" name="chafa_canvas_peek_config ()" link="chafa-ChafaCanvas.html#chafa-canvas-peek-config"/>
+    <keyword type="function" name="chafa_canvas_draw_all_pixels ()" link="chafa-ChafaCanvas.html#chafa-canvas-draw-all-pixels" since="1.2"/>
+    <keyword type="function" name="chafa_canvas_print ()" link="chafa-ChafaCanvas.html#chafa-canvas-print" since="1.6"/>
+    <keyword type="function" name="chafa_canvas_get_char_at ()" link="chafa-ChafaCanvas.html#chafa-canvas-get-char-at" since="1.8"/>
+    <keyword type="function" name="chafa_canvas_set_char_at ()" link="chafa-ChafaCanvas.html#chafa-canvas-set-char-at" since="1.8"/>
+    <keyword type="function" name="chafa_canvas_get_colors_at ()" link="chafa-ChafaCanvas.html#chafa-canvas-get-colors-at" since="1.8"/>
+    <keyword type="function" name="chafa_canvas_set_colors_at ()" link="chafa-ChafaCanvas.html#chafa-canvas-set-colors-at" since="1.8"/>
+    <keyword type="function" name="chafa_canvas_get_raw_colors_at ()" link="chafa-ChafaCanvas.html#chafa-canvas-get-raw-colors-at" since="1.8"/>
+    <keyword type="function" name="chafa_canvas_set_raw_colors_at ()" link="chafa-ChafaCanvas.html#chafa-canvas-set-raw-colors-at" since="1.8"/>
+    <keyword type="function" name="chafa_canvas_build_ansi ()" link="chafa-ChafaCanvas.html#chafa-canvas-build-ansi" deprecated="1.6: Use chafa_canvas_print() instead."/>
+    <keyword type="function" name="chafa_canvas_set_contents_rgba8 ()" link="chafa-ChafaCanvas.html#chafa-canvas-set-contents-rgba8" deprecated="1.2: Use chafa_canvas_draw_all_pixels() instead."/>
+    <keyword type="typedef" name="ChafaCanvas" link="chafa-ChafaCanvas.html#ChafaCanvas"/>
+    <keyword type="function" name="chafa_canvas_config_new ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-new"/>
+    <keyword type="function" name="chafa_canvas_config_copy ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-copy"/>
+    <keyword type="function" name="chafa_canvas_config_ref ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-ref"/>
+    <keyword type="function" name="chafa_canvas_config_unref ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-unref"/>
+    <keyword type="function" name="chafa_canvas_config_get_geometry ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-geometry"/>
+    <keyword type="function" name="chafa_canvas_config_set_geometry ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-geometry"/>
+    <keyword type="function" name="chafa_canvas_config_get_cell_geometry ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-cell-geometry" since="1.4"/>
+    <keyword type="function" name="chafa_canvas_config_set_cell_geometry ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-cell-geometry" since="1.4"/>
+    <keyword type="function" name="chafa_canvas_config_get_pixel_mode ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-pixel-mode" since="1.4"/>
+    <keyword type="function" name="chafa_canvas_config_set_pixel_mode ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-pixel-mode" since="1.4"/>
+    <keyword type="function" name="chafa_canvas_config_get_canvas_mode ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-canvas-mode"/>
+    <keyword type="function" name="chafa_canvas_config_set_canvas_mode ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-canvas-mode"/>
+    <keyword type="function" name="chafa_canvas_config_get_color_extractor ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-color-extractor" since="1.4"/>
+    <keyword type="function" name="chafa_canvas_config_set_color_extractor ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-color-extractor" since="1.4"/>
+    <keyword type="function" name="chafa_canvas_config_get_color_space ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-color-space"/>
+    <keyword type="function" name="chafa_canvas_config_set_color_space ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-color-space"/>
+    <keyword type="function" name="chafa_canvas_config_get_preprocessing_enabled ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-preprocessing-enabled"/>
+    <keyword type="function" name="chafa_canvas_config_set_preprocessing_enabled ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-preprocessing-enabled"/>
+    <keyword type="function" name="chafa_canvas_config_peek_symbol_map ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-peek-symbol-map"/>
+    <keyword type="function" name="chafa_canvas_config_set_symbol_map ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-symbol-map"/>
+    <keyword type="function" name="chafa_canvas_config_peek_fill_symbol_map ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-peek-fill-symbol-map"/>
+    <keyword type="function" name="chafa_canvas_config_set_fill_symbol_map ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-fill-symbol-map"/>
+    <keyword type="function" name="chafa_canvas_config_get_transparency_threshold ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-transparency-threshold"/>
+    <keyword type="function" name="chafa_canvas_config_set_transparency_threshold ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-transparency-threshold"/>
+    <keyword type="function" name="chafa_canvas_config_get_fg_only_enabled ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-fg-only-enabled" since="1.8"/>
+    <keyword type="function" name="chafa_canvas_config_set_fg_only_enabled ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-fg-only-enabled" since="1.8"/>
+    <keyword type="function" name="chafa_canvas_config_get_fg_color ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-fg-color"/>
+    <keyword type="function" name="chafa_canvas_config_set_fg_color ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-fg-color"/>
+    <keyword type="function" name="chafa_canvas_config_get_bg_color ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-bg-color"/>
+    <keyword type="function" name="chafa_canvas_config_set_bg_color ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-bg-color"/>
+    <keyword type="function" name="chafa_canvas_config_get_work_factor ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-work-factor"/>
+    <keyword type="function" name="chafa_canvas_config_set_work_factor ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-work-factor"/>
+    <keyword type="function" name="chafa_canvas_config_get_dither_mode ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-dither-mode" since="1.2"/>
+    <keyword type="function" name="chafa_canvas_config_set_dither_mode ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-dither-mode" since="1.2"/>
+    <keyword type="function" name="chafa_canvas_config_get_dither_grain_size ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-dither-grain-size" since="1.2"/>
+    <keyword type="function" name="chafa_canvas_config_set_dither_grain_size ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-dither-grain-size" since="1.2"/>
+    <keyword type="function" name="chafa_canvas_config_get_dither_intensity ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-dither-intensity" since="1.2"/>
+    <keyword type="function" name="chafa_canvas_config_set_dither_intensity ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-dither-intensity" since="1.2"/>
+    <keyword type="function" name="chafa_canvas_config_get_optimizations ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-get-optimizations" since="1.6"/>
+    <keyword type="function" name="chafa_canvas_config_set_optimizations ()" link="chafa-ChafaCanvasConfig.html#chafa-canvas-config-set-optimizations" since="1.6"/>
+    <keyword type="enum" name="enum ChafaPixelMode" link="chafa-ChafaCanvasConfig.html#ChafaPixelMode"/>
+    <keyword type="enum" name="enum ChafaColorSpace" link="chafa-ChafaCanvasConfig.html#ChafaColorSpace"/>
+    <keyword type="enum" name="enum ChafaCanvasMode" link="chafa-ChafaCanvasConfig.html#ChafaCanvasMode"/>
+    <keyword type="enum" name="enum ChafaDitherMode" link="chafa-ChafaCanvasConfig.html#ChafaDitherMode"/>
+    <keyword type="enum" name="enum ChafaColorExtractor" link="chafa-ChafaCanvasConfig.html#ChafaColorExtractor"/>
+    <keyword type="enum" name="enum ChafaOptimizations" link="chafa-ChafaCanvasConfig.html#ChafaOptimizations"/>
+    <keyword type="typedef" name="ChafaCanvasConfig" link="chafa-ChafaCanvasConfig.html#ChafaCanvasConfig"/>
+    <keyword type="function" name="chafa_symbol_map_new ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-new"/>
+    <keyword type="function" name="chafa_symbol_map_copy ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-copy"/>
+    <keyword type="function" name="chafa_symbol_map_ref ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-ref"/>
+    <keyword type="function" name="chafa_symbol_map_unref ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-unref"/>
+    <keyword type="function" name="chafa_symbol_map_add_by_tags ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-add-by-tags"/>
+    <keyword type="function" name="chafa_symbol_map_add_by_range ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-add-by-range" since="1.4"/>
+    <keyword type="function" name="chafa_symbol_map_remove_by_tags ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-remove-by-tags"/>
+    <keyword type="function" name="chafa_symbol_map_remove_by_range ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-remove-by-range" since="1.4"/>
+    <keyword type="function" name="chafa_symbol_map_apply_selectors ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-apply-selectors"/>
+    <keyword type="function" name="chafa_symbol_map_get_allow_builtin_glyphs ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-get-allow-builtin-glyphs" since="1.4"/>
+    <keyword type="function" name="chafa_symbol_map_set_allow_builtin_glyphs ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-set-allow-builtin-glyphs" since="1.4"/>
+    <keyword type="function" name="chafa_symbol_map_get_glyph ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-get-glyph" since="1.12"/>
+    <keyword type="function" name="chafa_symbol_map_add_glyph ()" link="chafa-ChafaSymbolMap.html#chafa-symbol-map-add-glyph" since="1.4"/>
+    <keyword type="macro" name="CHAFA_SYMBOL_WIDTH_PIXELS" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-WIDTH-PIXELS:CAPS"/>
+    <keyword type="macro" name="CHAFA_SYMBOL_HEIGHT_PIXELS" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-HEIGHT-PIXELS:CAPS"/>
+    <keyword type="enum" name="enum ChafaSymbolTags" link="chafa-ChafaSymbolMap.html#ChafaSymbolTags"/>
+    <keyword type="typedef" name="ChafaSymbolMap" link="chafa-ChafaSymbolMap.html#ChafaSymbolMap"/>
+    <keyword type="function" name="chafa_term_db_new ()" link="chafa-ChafaTermDb.html#chafa-term-db-new" since="1.6"/>
+    <keyword type="function" name="chafa_term_db_copy ()" link="chafa-ChafaTermDb.html#chafa-term-db-copy" since="1.6"/>
+    <keyword type="function" name="chafa_term_db_ref ()" link="chafa-ChafaTermDb.html#chafa-term-db-ref" since="1.6"/>
+    <keyword type="function" name="chafa_term_db_unref ()" link="chafa-ChafaTermDb.html#chafa-term-db-unref" since="1.6"/>
+    <keyword type="function" name="chafa_term_db_get_default ()" link="chafa-ChafaTermDb.html#chafa-term-db-get-default" since="1.6"/>
+    <keyword type="function" name="chafa_term_db_detect ()" link="chafa-ChafaTermDb.html#chafa-term-db-detect" since="1.6"/>
+    <keyword type="function" name="chafa_term_db_get_fallback_info ()" link="chafa-ChafaTermDb.html#chafa-term-db-get-fallback-info" since="1.6"/>
+    <keyword type="typedef" name="ChafaTermDb" link="chafa-ChafaTermDb.html#ChafaTermDb"/>
+    <keyword type="function" name="chafa_term_info_new ()" link="chafa-ChafaTermInfo.html#chafa-term-info-new" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_copy ()" link="chafa-ChafaTermInfo.html#chafa-term-info-copy" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_ref ()" link="chafa-ChafaTermInfo.html#chafa-term-info-ref" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_unref ()" link="chafa-ChafaTermInfo.html#chafa-term-info-unref" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_get_seq ()" link="chafa-ChafaTermInfo.html#chafa-term-info-get-seq" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_set_seq ()" link="chafa-ChafaTermInfo.html#chafa-term-info-set-seq" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_have_seq ()" link="chafa-ChafaTermInfo.html#chafa-term-info-have-seq" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_supplement ()" link="chafa-ChafaTermInfo.html#chafa-term-info-supplement" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_reset_terminal_soft ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-reset-terminal-soft" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_reset_terminal_hard ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-reset-terminal-hard" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_reset_attributes ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-reset-attributes" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_clear ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-clear" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_to_pos ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-to-pos" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_to_top_left ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-to-top-left" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_to_bottom_left ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-to-bottom-left" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_up ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-up" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_down ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-down" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_left ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-left" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_right ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-right" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_up_1 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-up-1" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_down_1 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-down-1" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_left_1 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-left-1" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_right_1 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-right-1" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_set_scrolling_rows ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-scrolling-rows" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_up_scroll ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-up-scroll" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_cursor_down_scroll ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-cursor-down-scroll" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_insert_cells ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-insert-cells" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_delete_cells ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-delete-cells" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_insert_rows ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-insert-rows" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_delete_rows ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-delete-rows" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_enable_cursor ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-enable-cursor" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_disable_cursor ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-disable-cursor" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_enable_echo ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-enable-echo" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_disable_echo ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-disable-echo" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_enable_insert ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-enable-insert" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_disable_insert ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-disable-insert" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_enable_wrap ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-enable-wrap" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_disable_wrap ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-disable-wrap" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_enable_bold ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-enable-bold" since="1.12"/>
+    <keyword type="function" name="chafa_term_info_emit_invert_colors ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-invert-colors" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_bg_8 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-bg-8" since="1.12"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_fg_8 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-fg-8" since="1.12"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_fgbg_8 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-fgbg-8" since="1.12"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_fg_16 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-fg-16" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_bg_16 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-bg-16" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_fgbg_16 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-fgbg-16" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_fg_256 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-fg-256" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_bg_256 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-bg-256" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_fgbg_256 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-fgbg-256" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_fg_direct ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-fg-direct" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_bg_direct ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-bg-direct" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_set_color_fgbg_direct ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-set-color-fgbg-direct" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_repeat_char ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-repeat-char" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_begin_sixels ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-begin-sixels" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_end_sixels ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-end-sixels" since="1.6"/>
+    <keyword type="function" name="chafa_term_info_emit_enable_sixel_scrolling ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-enable-sixel-scrolling" since="1.10"/>
+    <keyword type="function" name="chafa_term_info_emit_disable_sixel_scrolling ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-disable-sixel-scrolling" since="1.10"/>
+    <keyword type="function" name="chafa_term_info_emit_begin_kitty_immediate_image_v1 ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-begin-kitty-immediate-image-v1" since="1.8"/>
+    <keyword type="function" name="chafa_term_info_emit_end_kitty_image ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-end-kitty-image" since="1.8"/>
+    <keyword type="function" name="chafa_term_info_emit_begin_kitty_image_chunk ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-begin-kitty-image-chunk" since="1.8"/>
+    <keyword type="function" name="chafa_term_info_emit_end_kitty_image_chunk ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-end-kitty-image-chunk" since="1.8"/>
+    <keyword type="function" name="chafa_term_info_emit_begin_iterm2_image ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-begin-iterm2-image" since="1.8"/>
+    <keyword type="function" name="chafa_term_info_emit_end_iterm2_image ()" link="chafa-ChafaTermInfo.html#chafa-term-info-emit-end-iterm2-image" since="1.8"/>
+    <keyword type="macro" name="CHAFA_TERM_SEQ_LENGTH_MAX" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-LENGTH-MAX:CAPS"/>
+    <keyword type="enum" name="enum ChafaTermSeq" link="chafa-ChafaTermInfo.html#ChafaTermSeq"/>
+    <keyword type="typedef" name="ChafaTermInfo" link="chafa-ChafaTermInfo.html#ChafaTermInfo"/>
+    <keyword type="macro" name="CHAFA_TERM_INFO_ERROR" link="chafa-ChafaTermInfo.html#CHAFA-TERM-INFO-ERROR:CAPS"/>
+    <keyword type="enum" name="enum ChafaTermInfoError" link="chafa-ChafaTermInfo.html#ChafaTermInfoError"/>
+    <keyword type="function" name="chafa_get_builtin_features ()" link="chafa-Features.html#chafa-get-builtin-features"/>
+    <keyword type="function" name="chafa_get_supported_features ()" link="chafa-Features.html#chafa-get-supported-features"/>
+    <keyword type="function" name="chafa_describe_features ()" link="chafa-Features.html#chafa-describe-features"/>
+    <keyword type="function" name="chafa_get_n_threads ()" link="chafa-Features.html#chafa-get-n-threads"/>
+    <keyword type="function" name="chafa_set_n_threads ()" link="chafa-Features.html#chafa-set-n-threads"/>
+    <keyword type="function" name="chafa_get_n_actual_threads ()" link="chafa-Features.html#chafa-get-n-actual-threads"/>
+    <keyword type="enum" name="enum ChafaFeatures" link="chafa-Features.html#ChafaFeatures"/>
+    <keyword type="function" name="chafa_calc_canvas_geometry ()" link="chafa-Miscellaneous.html#chafa-calc-canvas-geometry"/>
+    <keyword type="macro" name="CHAFA_VERSION_MIN_REQUIRED" link="chafa-Miscellaneous.html#CHAFA-VERSION-MIN-REQUIRED:CAPS" since="1.2"/>
+    <keyword type="macro" name="CHAFA_VERSION_MAX_ALLOWED" link="chafa-Miscellaneous.html#CHAFA-VERSION-MAX-ALLOWED:CAPS" since="1.2"/>
+    <keyword type="macro" name="CHAFA_VERSION_1_0" link="chafa-Miscellaneous.html#CHAFA-VERSION-1-0:CAPS"/>
+    <keyword type="macro" name="CHAFA_VERSION_1_2" link="chafa-Miscellaneous.html#CHAFA-VERSION-1-2:CAPS"/>
+    <keyword type="macro" name="CHAFA_VERSION_1_4" link="chafa-Miscellaneous.html#CHAFA-VERSION-1-4:CAPS"/>
+    <keyword type="macro" name="CHAFA_VERSION_1_6" link="chafa-Miscellaneous.html#CHAFA-VERSION-1-6:CAPS"/>
+    <keyword type="macro" name="CHAFA_VERSION_1_8" link="chafa-Miscellaneous.html#CHAFA-VERSION-1-8:CAPS"/>
+    <keyword type="macro" name="CHAFA_VERSION_1_10" link="chafa-Miscellaneous.html#CHAFA-VERSION-1-10:CAPS"/>
+    <keyword type="macro" name="CHAFA_VERSION_1_12" link="chafa-Miscellaneous.html#CHAFA-VERSION-1-12:CAPS"/>
+    <keyword type="enum" name="enum ChafaPixelType" link="chafa-Miscellaneous.html#ChafaPixelType" since="1.4"/>
+    <keyword type="constant" name="CHAFA_PIXEL_MODE_SYMBOLS" link="chafa-ChafaCanvasConfig.html#CHAFA-PIXEL-MODE-SYMBOLS:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_MODE_SIXELS" link="chafa-ChafaCanvasConfig.html#CHAFA-PIXEL-MODE-SIXELS:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_MODE_KITTY" link="chafa-ChafaCanvasConfig.html#CHAFA-PIXEL-MODE-KITTY:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_MODE_ITERM2" link="chafa-ChafaCanvasConfig.html#CHAFA-PIXEL-MODE-ITERM2:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_MODE_MAX" link="chafa-ChafaCanvasConfig.html#CHAFA-PIXEL-MODE-MAX:CAPS"/>
+    <keyword type="constant" name="CHAFA_COLOR_SPACE_RGB" link="chafa-ChafaCanvasConfig.html#CHAFA-COLOR-SPACE-RGB:CAPS"/>
+    <keyword type="constant" name="CHAFA_COLOR_SPACE_DIN99D" link="chafa-ChafaCanvasConfig.html#CHAFA-COLOR-SPACE-DIN99D:CAPS"/>
+    <keyword type="constant" name="CHAFA_COLOR_SPACE_MAX" link="chafa-ChafaCanvasConfig.html#CHAFA-COLOR-SPACE-MAX:CAPS"/>
+    <keyword type="constant" name="CHAFA_CANVAS_MODE_TRUECOLOR" link="chafa-ChafaCanvasConfig.html#CHAFA-CANVAS-MODE-TRUECOLOR:CAPS"/>
+    <keyword type="constant" name="CHAFA_CANVAS_MODE_INDEXED_256" link="chafa-ChafaCanvasConfig.html#CHAFA-CANVAS-MODE-INDEXED-256:CAPS"/>
+    <keyword type="constant" name="CHAFA_CANVAS_MODE_INDEXED_240" link="chafa-ChafaCanvasConfig.html#CHAFA-CANVAS-MODE-INDEXED-240:CAPS"/>
+    <keyword type="constant" name="CHAFA_CANVAS_MODE_INDEXED_16" link="chafa-ChafaCanvasConfig.html#CHAFA-CANVAS-MODE-INDEXED-16:CAPS"/>
+    <keyword type="constant" name="CHAFA_CANVAS_MODE_FGBG_BGFG" link="chafa-ChafaCanvasConfig.html#CHAFA-CANVAS-MODE-FGBG-BGFG:CAPS"/>
+    <keyword type="constant" name="CHAFA_CANVAS_MODE_FGBG" link="chafa-ChafaCanvasConfig.html#CHAFA-CANVAS-MODE-FGBG:CAPS"/>
+    <keyword type="constant" name="CHAFA_CANVAS_MODE_INDEXED_8" link="chafa-ChafaCanvasConfig.html#CHAFA-CANVAS-MODE-INDEXED-8:CAPS"/>
+    <keyword type="constant" name="CHAFA_CANVAS_MODE_INDEXED_16_8" link="chafa-ChafaCanvasConfig.html#CHAFA-CANVAS-MODE-INDEXED-16-8:CAPS"/>
+    <keyword type="constant" name="CHAFA_CANVAS_MODE_MAX" link="chafa-ChafaCanvasConfig.html#CHAFA-CANVAS-MODE-MAX:CAPS"/>
+    <keyword type="constant" name="CHAFA_DITHER_MODE_NONE" link="chafa-ChafaCanvasConfig.html#CHAFA-DITHER-MODE-NONE:CAPS"/>
+    <keyword type="constant" name="CHAFA_DITHER_MODE_ORDERED" link="chafa-ChafaCanvasConfig.html#CHAFA-DITHER-MODE-ORDERED:CAPS"/>
+    <keyword type="constant" name="CHAFA_DITHER_MODE_DIFFUSION" link="chafa-ChafaCanvasConfig.html#CHAFA-DITHER-MODE-DIFFUSION:CAPS"/>
+    <keyword type="constant" name="CHAFA_DITHER_MODE_MAX" link="chafa-ChafaCanvasConfig.html#CHAFA-DITHER-MODE-MAX:CAPS"/>
+    <keyword type="constant" name="CHAFA_COLOR_EXTRACTOR_AVERAGE" link="chafa-ChafaCanvasConfig.html#CHAFA-COLOR-EXTRACTOR-AVERAGE:CAPS"/>
+    <keyword type="constant" name="CHAFA_COLOR_EXTRACTOR_MEDIAN" link="chafa-ChafaCanvasConfig.html#CHAFA-COLOR-EXTRACTOR-MEDIAN:CAPS"/>
+    <keyword type="constant" name="CHAFA_COLOR_EXTRACTOR_MAX" link="chafa-ChafaCanvasConfig.html#CHAFA-COLOR-EXTRACTOR-MAX:CAPS"/>
+    <keyword type="constant" name="CHAFA_OPTIMIZATION_REUSE_ATTRIBUTES" link="chafa-ChafaCanvasConfig.html#CHAFA-OPTIMIZATION-REUSE-ATTRIBUTES:CAPS"/>
+    <keyword type="constant" name="CHAFA_OPTIMIZATION_SKIP_CELLS" link="chafa-ChafaCanvasConfig.html#CHAFA-OPTIMIZATION-SKIP-CELLS:CAPS"/>
+    <keyword type="constant" name="CHAFA_OPTIMIZATION_REPEAT_CELLS" link="chafa-ChafaCanvasConfig.html#CHAFA-OPTIMIZATION-REPEAT-CELLS:CAPS"/>
+    <keyword type="constant" name="CHAFA_OPTIMIZATION_NONE" link="chafa-ChafaCanvasConfig.html#CHAFA-OPTIMIZATION-NONE:CAPS"/>
+    <keyword type="constant" name="CHAFA_OPTIMIZATION_ALL" link="chafa-ChafaCanvasConfig.html#CHAFA-OPTIMIZATION-ALL:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_NONE" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-NONE:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_SPACE" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-SPACE:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_SOLID" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-SOLID:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_STIPPLE" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-STIPPLE:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_BLOCK" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-BLOCK:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_BORDER" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-BORDER:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_DIAGONAL" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-DIAGONAL:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_DOT" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-DOT:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_QUAD" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-QUAD:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_HHALF" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-HHALF:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_VHALF" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-VHALF:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_HALF" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-HALF:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_INVERTED" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-INVERTED:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_BRAILLE" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-BRAILLE:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_TECHNICAL" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-TECHNICAL:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_GEOMETRIC" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-GEOMETRIC:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_ASCII" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-ASCII:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_ALPHA" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-ALPHA:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_DIGIT" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-DIGIT:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_ALNUM" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-ALNUM:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_NARROW" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-NARROW:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_WIDE" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-WIDE:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_AMBIGUOUS" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-AMBIGUOUS:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_UGLY" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-UGLY:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_LEGACY" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-LEGACY:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_SEXTANT" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-SEXTANT:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_WEDGE" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-WEDGE:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_LATIN" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-LATIN:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_EXTRA" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-EXTRA:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_BAD" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-BAD:CAPS"/>
+    <keyword type="constant" name="CHAFA_SYMBOL_TAG_ALL" link="chafa-ChafaSymbolMap.html#CHAFA-SYMBOL-TAG-ALL:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_RESET_TERMINAL_SOFT" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-RESET-TERMINAL-SOFT:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_RESET_TERMINAL_HARD" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-RESET-TERMINAL-HARD:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_RESET_ATTRIBUTES" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-RESET-ATTRIBUTES:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CLEAR" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CLEAR:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_INVERT_COLORS" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-INVERT-COLORS:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_TO_TOP_LEFT" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-TO-TOP-LEFT:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_TO_BOTTOM_LEFT" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-TO-BOTTOM-LEFT:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_TO_POS" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-TO-POS:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_UP_1" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-UP-1:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_UP" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-UP:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_DOWN_1" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-DOWN-1:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_DOWN" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-DOWN:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_LEFT_1" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-LEFT-1:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_LEFT" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-LEFT:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_RIGHT_1" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-RIGHT-1:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_RIGHT" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-RIGHT:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_UP_SCROLL" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-UP-SCROLL:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_CURSOR_DOWN_SCROLL" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-CURSOR-DOWN-SCROLL:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_INSERT_CELLS" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-INSERT-CELLS:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DELETE_CELLS" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DELETE-CELLS:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_INSERT_ROWS" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-INSERT-ROWS:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DELETE_ROWS" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DELETE-ROWS:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_SCROLLING_ROWS" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-SCROLLING-ROWS:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_ENABLE_INSERT" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-ENABLE-INSERT:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DISABLE_INSERT" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DISABLE-INSERT:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_ENABLE_CURSOR" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-ENABLE-CURSOR:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DISABLE_CURSOR" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DISABLE-CURSOR:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_ENABLE_ECHO" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-ENABLE-ECHO:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DISABLE_ECHO" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DISABLE-ECHO:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_ENABLE_WRAP" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-ENABLE-WRAP:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DISABLE_WRAP" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DISABLE-WRAP:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_FG_DIRECT" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-FG-DIRECT:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_BG_DIRECT" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-BG-DIRECT:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_FGBG_DIRECT" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-FGBG-DIRECT:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_FG_256" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-FG-256:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_BG_256" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-BG-256:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_FGBG_256" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-FGBG-256:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_FG_16" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-FG-16:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_BG_16" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-BG-16:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_FGBG_16" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-FGBG-16:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_BEGIN_SIXELS" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-BEGIN-SIXELS:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_END_SIXELS" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-END-SIXELS:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_REPEAT_CHAR" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-REPEAT-CHAR:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_BEGIN_KITTY_IMMEDIATE_IMAGE_V1" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-BEGIN-KITTY-IMMEDIATE-IMAGE-V1:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_END_KITTY_IMAGE" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-END-KITTY-IMAGE:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_BEGIN_KITTY_IMAGE_CHUNK" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-BEGIN-KITTY-IMAGE-CHUNK:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_END_KITTY_IMAGE_CHUNK" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-END-KITTY-IMAGE-CHUNK:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_BEGIN_ITERM2_IMAGE" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-BEGIN-ITERM2-IMAGE:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_END_ITERM2_IMAGE" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-END-ITERM2-IMAGE:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_ENABLE_SIXEL_SCROLLING" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-ENABLE-SIXEL-SCROLLING:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DISABLE_SIXEL_SCROLLING" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DISABLE-SIXEL-SCROLLING:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_ENABLE_BOLD" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-ENABLE-BOLD:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_FG_8" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-FG-8:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_BG_8" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-BG-8:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_COLOR_FGBG_8" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-COLOR-FGBG-8:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_RESET_DEFAULT_FG" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-RESET-DEFAULT-FG:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_DEFAULT_FG" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-DEFAULT-FG:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_QUERY_DEFAULT_FG" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-QUERY-DEFAULT-FG:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_RESET_DEFAULT_BG" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-RESET-DEFAULT-BG:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_SET_DEFAULT_BG" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-SET-DEFAULT-BG:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_QUERY_DEFAULT_BG" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-QUERY-DEFAULT-BG:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_TAB_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-TAB-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_UP_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-UP-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_UP_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-UP-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_UP_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-UP-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DOWN_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DOWN-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DOWN_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DOWN-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DOWN_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DOWN-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_LEFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-LEFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_LEFT_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-LEFT-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_LEFT_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-LEFT-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_RIGHT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-RIGHT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_RIGHT_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-RIGHT-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_RIGHT_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-RIGHT-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_PAGE_UP_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-PAGE-UP-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_PAGE_UP_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-PAGE-UP-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_PAGE_UP_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-PAGE-UP-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_PAGE_DOWN_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-PAGE-DOWN-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_PAGE_DOWN_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-PAGE-DOWN-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_PAGE_DOWN_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-PAGE-DOWN-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_HOME_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-HOME-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_HOME_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-HOME-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_HOME_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-HOME-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_END_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-END-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_END_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-END-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_END_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-END-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_INSERT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-INSERT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_INSERT_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-INSERT-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_INSERT_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-INSERT-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DELETE_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DELETE-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DELETE_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DELETE-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_DELETE_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-DELETE-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F1_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F1-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F1_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F1-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F1_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F1-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F2_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F2-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F2_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F2-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F2_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F2-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F3_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F3-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F3_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F3-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F3_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F3-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F4_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F4-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F4_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F4-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F4_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F4-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F5_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F5-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F5_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F5-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F5_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F5-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F6_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F6-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F6_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F6-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F6_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F6-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F7_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F7-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F7_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F7-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F7_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F7-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F8_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F8-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F8_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F8-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F8_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F8-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F9_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F9-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F9_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F9-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F9_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F9-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F10_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F10-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F10_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F10-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F10_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F10-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F11_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F11-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F11_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F11-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F11_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F11-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F12_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F12-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F12_CTRL_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F12-CTRL-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_F12_SHIFT_KEY" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-F12-SHIFT-KEY:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_SEQ_MAX" link="chafa-ChafaTermInfo.html#CHAFA-TERM-SEQ-MAX:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_INFO_ERROR_SEQ_TOO_LONG" link="chafa-ChafaTermInfo.html#CHAFA-TERM-INFO-ERROR-SEQ-TOO-LONG:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_INFO_ERROR_BAD_ESCAPE" link="chafa-ChafaTermInfo.html#CHAFA-TERM-INFO-ERROR-BAD-ESCAPE:CAPS"/>
+    <keyword type="constant" name="CHAFA_TERM_INFO_ERROR_BAD_ARGUMENTS" link="chafa-ChafaTermInfo.html#CHAFA-TERM-INFO-ERROR-BAD-ARGUMENTS:CAPS"/>
+    <keyword type="constant" name="CHAFA_FEATURE_MMX" link="chafa-Features.html#CHAFA-FEATURE-MMX:CAPS"/>
+    <keyword type="constant" name="CHAFA_FEATURE_SSE41" link="chafa-Features.html#CHAFA-FEATURE-SSE41:CAPS"/>
+    <keyword type="constant" name="CHAFA_FEATURE_POPCNT" link="chafa-Features.html#CHAFA-FEATURE-POPCNT:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_RGBA8_PREMULTIPLIED" link="chafa-Miscellaneous.html#CHAFA-PIXEL-RGBA8-PREMULTIPLIED:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_BGRA8_PREMULTIPLIED" link="chafa-Miscellaneous.html#CHAFA-PIXEL-BGRA8-PREMULTIPLIED:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_ARGB8_PREMULTIPLIED" link="chafa-Miscellaneous.html#CHAFA-PIXEL-ARGB8-PREMULTIPLIED:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_ABGR8_PREMULTIPLIED" link="chafa-Miscellaneous.html#CHAFA-PIXEL-ABGR8-PREMULTIPLIED:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_RGBA8_UNASSOCIATED" link="chafa-Miscellaneous.html#CHAFA-PIXEL-RGBA8-UNASSOCIATED:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_BGRA8_UNASSOCIATED" link="chafa-Miscellaneous.html#CHAFA-PIXEL-BGRA8-UNASSOCIATED:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_ARGB8_UNASSOCIATED" link="chafa-Miscellaneous.html#CHAFA-PIXEL-ARGB8-UNASSOCIATED:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_ABGR8_UNASSOCIATED" link="chafa-Miscellaneous.html#CHAFA-PIXEL-ABGR8-UNASSOCIATED:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_RGB8" link="chafa-Miscellaneous.html#CHAFA-PIXEL-RGB8:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_BGR8" link="chafa-Miscellaneous.html#CHAFA-PIXEL-BGR8:CAPS"/>
+    <keyword type="constant" name="CHAFA_PIXEL_MAX" link="chafa-Miscellaneous.html#CHAFA-PIXEL-MAX:CAPS"/>
+  </functions>
+</book>

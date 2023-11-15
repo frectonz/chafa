@@ -1,0 +1,179 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>chafa</title><link rel="stylesheet" type="text/css" href="manpage.css"><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"><link rel="home" href="#chafa" title="chafa"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="refentry"><a name="chafa"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>chafa &#8212; Character art facsimile generator</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><div class="cmdsynopsis"><p><code class="command">chafa</code>  [OPTION...] [IMAGE...]</p></div></div><div class="refsect1"><a name="id1337"></a><h2>Description</h2><p>
+<span class="command"><strong>chafa</strong></span> is a command-line utility that converts image data,
+including animated GIFs, into graphics formats or ANSI/Unicode character art
+suitable for display in a terminal. It has broad feature support, allowing it to
+be used on devices ranging from historical teleprinters to modern terminal
+emulators and everything in between.
+</p><p>
+You can specify one or more input files, but the default behavior is slightly
+different with multiple files -- for instance, animations will not loop forever
+when there is more than one input file.
+</p></div><div class="refsect1"><a name="id1338"></a><h2>Options</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="option">--animate <em class="replaceable"><code>bool</code></em></code></span></dt><dd><p>
+Whether to allow animation [on, off]. Defaults to on. When off, will show a
+still frame from each animation.
+</p></dd><dt><span class="term"><code class="option">--bg <em class="replaceable"><code>color</code></em></code></span></dt><dd><p>
+Background color of display (color name or hex). Partially transparent input
+will be blended with this color. Color names are based on those provided with
+X.Org. Defaults to black.
+</p></dd><dt><span class="term"><code class="option">-C <em class="replaceable"><code>bool</code></em>, --center <em class="replaceable"><code>bool</code></em></code></span></dt><dd><p>
+Center images [on, off]. Defaults to off.
+</p></dd><dt><span class="term"><code class="option">--clear</code></span></dt><dd><p>
+Clear screen before processing each file.
+</p></dd><dt><span class="term"><code class="option">-c <em class="replaceable"><code>mode</code></em>, --colors <em class="replaceable"><code>mode</code></em></code></span></dt><dd><p>
+Set output color mode; one of [none, 2, 8, 16/8 16, 240, 256, full]. The
+240-color mode is recommended over the 256-color one, since the lower 16 colors
+are unreliable and tend to differ between terminals. 16-color mode will use
+aixterm extensions to produce 16 foreground and background colors. The 16/8
+mode allows for 8 colors plus another "bright" 8 colors in the foreground
+implemented with the "bold" escape sequence. 2-color mode will only emit the
+ANSI codes for reverse color and attribute reset, while "none" will emit no
+escape sequences at all.
+</p><p>
+In sixel mode, "full" will dynamically generate a 256-color palette for each
+image or animation frame. The other modes refer to built-in palettes. "none"
+and "2" are interchangeable and will use the specified foreground/background
+colors (see --fg and --bg).
+</p><p>
+If left unspecified, an optimal default will be chosen based on the current
+environment.
+</p></dd><dt><span class="term"><code class="option">--color-extractor <em class="replaceable"><code>extractor</code></em></code></span></dt><dd><p>
+Method for extracting color from an area; one of [average, median]. Median
+normally produces crisper output, while average may perform better on noisy images.
+Defaults to average.
+</p></dd><dt><span class="term"><code class="option">--color-space <em class="replaceable"><code>cs</code></em></code></span></dt><dd><p>
+Color space used for quantization; one of [rgb, din99d]. Defaults to rgb,
+which is faster but less accurate.
+</p></dd><dt><span class="term"><code class="option">--dither <em class="replaceable"><code>type</code></em></code></span></dt><dd><p>
+Type of dithering to apply during quantization. One of [none, ordered,
+diffusion]. "Bayer" is a synonym for "ordered", and "fs" (Floyd-Steinberg) is
+a synonym for "diffusion".
+</p></dd><dt><span class="term"><code class="option">--dither-grain <em class="replaceable"><code>width</code></em>x<em class="replaceable"><code>height</code></em></code></span></dt><dd><p>
+Dimensions of grain used when dithering. Specified as width x height, where
+each can be one of [1, 2, 4, 8] pixels. One character cell is by definition 8
+pixels across in both dimensions. Defaults to 4x4 in symbol mode and 1x1
+in sixel mode.
+</p></dd><dt><span class="term"><code class="option">--dither-intensity <em class="replaceable"><code>intensity</code></em></code></span></dt><dd><p>
+Intensity of dithering pattern. Ranges from 0.0 to infinity, with 1.0 considered
+neutral. Lower values tend to reduce the amount of dithering done, while higher
+values increase it. In practice, values higher than 10.0 are unlikely to produce
+useful results.
+</p></dd><dt><span class="term"><code class="option">-d, --duration <em class="replaceable"><code>seconds</code></em></code></span></dt><dd><p>
+Time to show each file, in seconds. Defaults to zero for still images and for
+animations when multiple files are specified. If a single animation is
+specified, defaults to infinite. Animations will always be played through at
+least once, even if duration is e.g. zero.
+</p></dd><dt><span class="term"><code class="option">--fg <em class="replaceable"><code>color</code></em></code></span></dt><dd><p>
+Foreground color of display (color name or hex). Together with the background
+color specified by --bg, this specifies the terminal's palette in color modes 2
+and none. Color names are based on those provided with X.Org. Defaults to
+white.
+</p></dd><dt><span class="term"><code class="option">--fg-only</code></span></dt><dd><p>
+Leave the background color untouched. This produces character-cell output
+using foreground colors only, and will avoid resetting or inverting the
+colors.
+</p></dd><dt><span class="term"><code class="option">--fill <em class="replaceable"><code>symbols</code></em></code></span></dt><dd><p>
+Specify character symbols to use for fill/gradients. Defaults to none.
+Usage is similar to that of --symbols; see below.
+</p></dd><dt><span class="term"><code class="option">--font-ratio <em class="replaceable"><code>width</code></em>/<em class="replaceable"><code>height</code></em></code></span></dt><dd><p>
+Target font's width/height ratio. Can be specified as a real number or a
+fraction. Defaults to 1/2.
+</p></dd><dt><span class="term"><code class="option">-f, --format <em class="replaceable"><code>format</code></em></code></span></dt><dd><p>
+Set output format; one of [iterm, kitty, sixels, symbols]. The default is
+iterm, kitty or sixels if the connected terminal supports one of these,
+falling back to symbols ("ANSI art") otherwise.
+</p></dd><dt><span class="term"><code class="option">--glyph-file <em class="replaceable"><code>file</code></em></code></span></dt><dd><p>
+Load glyph information from file, which can be any font file supported by
+FreeType (TTF, PCF, etc). The glyph outlines will replace any existing
+outlines, including builtins. Useful in symbol mode for custom font
+support or for improving quality with a specific font. Note that this only
+makes sense if the output terminal is using a matching font. Can be
+specified multiple times.
+</p></dd><dt><span class="term"><code class="option">-h, --help</code></span></dt><dd><p>
+Show a brief help text.
+</p></dd><dt><span class="term"><code class="option">--invert</code></span></dt><dd><p>
+Invert video. For display with bright backgrounds in color modes 2 and
+none. Swaps --fg and --bg.
+</p></dd><dt><span class="term"><code class="option">--margin-bottom <em class="replaceable"><code>num</code></em></code></span></dt><dd><p>
+When terminal size is detected, reserve at least this many rows at the bottom
+as a safety margin. Can be used to prevent images from scrolling out.
+Defaults to 1.
+</p></dd><dt><span class="term"><code class="option">--margin-right <em class="replaceable"><code>num</code></em></code></span></dt><dd><p>
+When terminal size is detected, reserve at least this many columns on the
+right-hand side as a safety margin. Defaults to 0.
+</p></dd><dt><span class="term"><code class="option">-O <em class="replaceable"><code>num</code></em>, --optimize <em class="replaceable"><code>num</code></em></code></span></dt><dd><p>
+Compress the output by using control sequences intelligently [0-9]. 0
+disables, 9 enables every available optimization. Defaults to 5, except
+for when used with "-c none", where it defaults to 0.
+</p></dd><dt><span class="term"><code class="option">--polite <em class="replaceable"><code>bool</code></em></code></span></dt><dd><p>
+Polite mode [on, off]. Defaults to on. Turning this off may enhance presentation
+and prevent interference from other programs, but risks leaving the terminal in
+an altered state (rude).
+</p></dd><dt><span class="term"><code class="option">-p <em class="replaceable"><code>bool</code></em>, --preprocess <em class="replaceable"><code>bool</code></em></code></span></dt><dd><p>
+Image preprocessing [on, off]. Defaults to on with 16 colors or lower, off
+otherwise. This enhances colors and contrast prior to conversion, which can be
+useful in low-color modes.
+</p></dd><dt><span class="term"><code class="option">--scale <em class="replaceable"><code>NUM</code></em></code></span></dt><dd><p>
+Scale image, respecting terminal's maximum dimensions. 1.0 approximates
+original pixel dimensions. Specify "max" to use all available space. Defaults
+to 1.0 for pixel graphics and 4.0 for symbols.
+</p></dd><dt><span class="term"><code class="option">-s <em class="replaceable"><code>width</code></em>x<em class="replaceable"><code>height</code></em>, --size <em class="replaceable"><code>width</code></em>x<em class="replaceable"><code>height</code></em></code></span></dt><dd><p>
+Set maximum output dimensions in columns and rows. By default this will be the
+size of your terminal, or 80x25 if size detection fails.
+</p></dd><dt><span class="term"><code class="option">--speed <em class="replaceable"><code>speed</code></em></code></span></dt><dd><p>
+Set the speed animations will play at. This can be either a unitless
+multiplier (fractions are allowed), or a real number followed by "fps"
+to apply a specific framerate.
+</p></dd><dt><span class="term"><code class="option">--stretch</code></span></dt><dd><p>
+Stretch image to fit output dimensions; ignore aspect. Implies --scale max.
+</p></dd><dt><span class="term"><code class="option">--symbols <em class="replaceable"><code>symbols</code></em></code></span></dt><dd><p>
+Specify character symbols to employ in final output. See below for full usage
+and a list of symbol classes.
+</p></dd><dt><span class="term"><code class="option">--threads <em class="replaceable"><code>num</code></em></code></span></dt><dd><p>
+Maximum number of CPU threads to use. If left unspecified or negative,
+this will equal available CPU cores.
+</p></dd><dt><span class="term"><code class="option">-t <em class="replaceable"><code>threshold</code></em>, --threshold
+<em class="replaceable"><code>threshold</code></em></code></span></dt><dd><p>
+Threshold above which full transparency will be used [0.0 - 1.0]. Setting this
+to 0.0 will render a blank image, while a value of 1.0 will replace any
+transparency with the background color (configurable with --bg).
+</p></dd><dt><span class="term"><code class="option">--version</code></span></dt><dd><p>
+Show version, feature and copyright information.
+</p></dd><dt><span class="term"><code class="option">--watch</code></span></dt><dd><p>
+Watch a single input file, redisplaying it whenever its contents change. Will run
+until manually interrupted or, if --duration is set, until it expires.
+</p></dd><dt><span class="term"><code class="option">-w <em class="replaceable"><code>num</code></em>, --work <em class="replaceable"><code>num</code></em></code></span></dt><dd><p>
+How hard to work in terms of CPU and memory [1-9]. 1 is the cheapest, 9 is the
+most accurate. Defaults to 5.
+</p></dd></dl></div></div><div class="refsect1"><a name="id1339"></a><h2>Exit Status</h2><p>
+<span class="command"><strong>chafa</strong></span> will return 0 on success, 1 on partial failure or
+2 on complete failure (including when invoked with no arguments).
+</p><div class="segmentedlist"><div class="seglistitem"><div class="seg"><strong><span class="segtitle">Status: </span></strong>0</div><div class="seg"><strong><span class="segtitle">Meaning: </span></strong>Success</div></div><div class="seglistitem"><div class="seg"><strong><span class="segtitle">Status: </span></strong>1</div><div class="seg"><strong><span class="segtitle">Meaning: </span></strong>Some files failed to display</div></div><div class="seglistitem"><div class="seg"><strong><span class="segtitle">Status: </span></strong>2</div><div class="seg"><strong><span class="segtitle">Meaning: </span></strong>All files failed to display</div></div></div></div><div class="refsect1"><a name="id1340"></a><h2>Symbols</h2><p>
+Accepted classes for --symbols are [all, none, space, solid, stipple, block,
+border, diagonal, dot, quad, half, hhalf, vhalf, inverted, braille,
+technical, geometric, ascii, legacy, sextant, wedge, wide, narrow]. Some
+symbols belong to multiple classes, e.g. diagonals are also borders.
+</p><p>
+You can specify a list of classes separated by commas, or prefix them with +
+and - to add or remove symbols relative to the existing set. The ordering is
+significant.
+</p><p>
+The default symbol set is block+border+space-wide-inverted for all modes
+except "none", which uses block+border+space-wide (including inverse symbols).
+</p></div><div class="refsect1"><a name="id1341"></a><h2>Examples</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">chafa in.gif</span></dt><dd><p>
+Show a potentially animated GIF image in the terminal. If this is an animation,
+it will run until the user generates an interrupt (typically ctrl-c). All
+parameters will be autodetected based on the current environment.
+</p></dd><dt><span class="term">chafa -c full -s 200 in.gif</span></dt><dd><p>
+Like the above, but force truecolor output that is 200 characters wide and
+calculate the height preserving the aspect of the original image.
+</p></dd><dt><span class="term">chafa -c 16 --color-space din99d --symbols -dot in.jpg</span></dt><dd><p>
+Generate 16-color output with perceptual color picking and avoid using dot symbols.
+</p></dd><dt><span class="term">chafa -c none --symbols block+border-solid in.png</span></dt><dd><p>
+Generate uncolored output using block and border symbols, but avoid the solid
+block symbol.
+</p></dd></dl></div></div><div class="refsect1"><a name="id1342"></a><h2>Further Reading</h2><p>
+See the <a class="link" href="https://hpjansson.org/chafa/" target="_top">Chafa homepage</a>
+for more information.
+</p></div><div class="refsect1"><a name="id1343"></a><h2>Author</h2><p>
+    Written by <a class="link" href="https://hpjansson.org/" target="_top">Hans Petter Jansson</a> <code class="email">&lt;<a class="email" href="mailto:hpj@hpjansson.org">hpj@hpjansson.org</a>&gt;</code>.
+</p></div></div></body></html>

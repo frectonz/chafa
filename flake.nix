@@ -49,6 +49,7 @@
 
             glib
             chafa
+            freetype
             pkg-config
           ];
           LIBCLANG_PATH = "${pkgs.libclang.lib}/lib";
