@@ -2,28 +2,8 @@ use std::env;
 use std::path::PathBuf;
 
 fn main() {
-    let chafa_lib = pkg_config::probe_library("chafa");
-
-    println!("cargo:rerun-if-changed=build.rs");
-
-    match chafa_lib {
-        Ok(lib) => chafa_installed(lib),
-        Err(_) => build_chafa(),
-    };
-}
-
-fn build_chafa() {
-    let dst = autotools::Config::new("vendor/chafa-1.12.5")
-        .config_option("quiet", None)
-        .build();
-
-    println!("cargo:rustc-link-search=native={}", dst.display());
-
     let chafa_lib = pkg_config::probe_library("chafa").unwrap();
-    chafa_installed(chafa_lib);
-}
 
-fn chafa_installed(lib: pkg_config::Library) {
     println!("cargo:rustc-link-lib=chafa");
     println!("cargo:rerun-if-changed=wrapper.h");
 
@@ -31,7 +11,8 @@ fn chafa_installed(lib: pkg_config::Library) {
         .header("wrapper.h")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
         .clang_args(
-            lib.include_paths
+            chafa_lib
+                .include_paths
                 .iter()
                 .map(|path| path.to_str().unwrap())
                 .map(|path| format!("-I{path}")),
