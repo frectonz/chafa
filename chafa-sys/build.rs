@@ -11,7 +11,9 @@ fn main() {
 }
 
 fn build_chafa() {
-    let dst = autotools::Config::new("vendor/chafa-1.12.5").build();
+    let dst = autotools::Config::new("vendor/chafa-1.12.5")
+        .config_option("quiet", None)
+        .build();
 
     println!("cargo:rustc-link-search=native={}", dst.display());
 
