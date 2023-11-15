@@ -4,6 +4,8 @@ use std::path::PathBuf;
 fn main() {
     let chafa_lib = pkg_config::probe_library("chafa");
 
+    println!("cargo:rerun-if-changed=build.rs");
+
     match chafa_lib {
         Ok(lib) => chafa_installed(lib),
         Err(_) => build_chafa(),
