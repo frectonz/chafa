@@ -83,7 +83,8 @@ mod tests {
         };
 
         let (terminal_size::Width(cols), terminal_size::Height(rows)) =
-            terminal_size::terminal_size().expect("couldn't get term width and height");
+            terminal_size::terminal_size()
+                .unwrap_or((terminal_size::Width(100), terminal_size::Height(50)));
 
         let width_ptr: *mut i32 = &mut (cols as i32);
         let height_ptr: *mut i32 = &mut (rows as i32);
