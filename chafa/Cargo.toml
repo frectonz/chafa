@@ -1,0 +1,10 @@
+[package]
+name = "chafa"
+version = "0.1.0"
+edition = "2021"
+authors = ["frectonz"]
+license = "MIT"
+homepage = "https://github.com/frectonz/chafa"
+description = "Safe wrapper around chafa"
+
+[dependencies]
