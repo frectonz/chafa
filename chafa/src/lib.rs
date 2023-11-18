@@ -136,8 +136,7 @@ mod tests {
 
     #[test]
     fn frectonz_image() {
-        let img = image::open("/home/frectonz/workspace/chafa/chafa-sys/frectonz.png")
-            .expect("failed to open image");
+        let img = image::open("../chafa-sys/frectonz.png").expect("failed to open image");
 
         let canvas = ChafaCanvas::from_term(img.width(), img.height());
         let pixels = img.to_rgba8();
