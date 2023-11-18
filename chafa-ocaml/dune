@@ -1,0 +1,15 @@
+(rule
+ (targets libchafa_ocaml.a dllchafa_ocaml.so)
+ (deps (source_tree .))
+ (action
+  (no-infer
+   (progn
+    (run cargo build)
+    (run cp target/debug/libchafa_ocaml.so ./dllchafa_ocaml.so)
+    (run cp target/debug/libchafa_ocaml.a ./libchafa_ocaml.a)
+   ))))
+
+(library
+ (name chafa_ocaml)
+ (c_library_flags -lchafa)
+ (foreign_archives chafa_ocaml))

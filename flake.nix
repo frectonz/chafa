@@ -51,6 +51,9 @@
             chafa
             freetype
             pkg-config
+
+            dune_3
+            ocaml
           ];
           LIBCLANG_PATH = "${pkgs.libclang.lib}/lib";
         };
