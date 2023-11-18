@@ -8,4 +8,4 @@ homepage = "https://github.com/frectonz/chafa"
 description = "Safe wrapper around chafa"
 
 [dependencies]
-chafa-sys = { path = "../chafa-sys" }
+chafa-sys = { version = "0.1.4", path = "../chafa-sys" }
