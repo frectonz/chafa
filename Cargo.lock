@@ -96,6 +96,8 @@ name = "chafa"
 version = "0.1.0"
 dependencies = [
  "chafa-sys",
+ "image",
+ "terminal_size",
 ]
 
 [[package]]

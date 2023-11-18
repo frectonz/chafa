@@ -9,11 +9,9 @@ ocaml_export! {
         let width: i32 = width.to_rust(cr);
         let height: i32 = height.to_rust(cr);
         let canvas = ChafaCanvas::new(width as u32, height as u32);
-        let pixels = img.to_rgb8();
+        let pixels = img.to_rgba8();
 
         let out = canvas.draw(&pixels, img.width(), img.height());
-
-        println!("{out}");
 
         out.to_ocaml(cr)
     }
