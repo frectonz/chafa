@@ -102,11 +102,12 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "chafa"
-version = "0.1.0"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a7fe72b4ba58074d829bc2715f33a23454565defaa24334bca16957235a6edec"
+checksum = "24886ec729b8f565fa4a1fba6e5a0769adb638f80f94d4edf5a3880000543dc1"
 dependencies = [
  "chafa-sys",
+ "terminal_size",
 ]
 
 [[package]]
@@ -661,6 +662,16 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
+]
+
+[[package]]
+name = "terminal_size"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "21bebf2b7c9e0a515f6e0f8c51dc0f8e4696391e6f1ff30379559f8365fb0df7"
+dependencies = [
+ "rustix",
+ "windows-sys",
 ]
 
 [[package]]

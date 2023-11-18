@@ -1,14 +1,12 @@
 use chafa::ChafaCanvas;
-use ocaml_interop::{ocaml_export, OCaml, OCamlInt, OCamlRef, ToOCaml};
+use ocaml_interop::{ocaml_export, OCaml, OCamlRef, ToOCaml};
 
 ocaml_export! {
-    fn draw_image(cr, path: OCamlRef<String>, width: OCamlRef<OCamlInt>, height: OCamlRef<OCamlInt>) -> OCaml<String> {
+    fn draw_image(cr, path: OCamlRef<String>) -> OCaml<String> {
         let path: String = path.to_rust(cr);
         let img = image::open(path).expect("Failed to open image");
 
-        let width: i32 = width.to_rust(cr);
-        let height: i32 = height.to_rust(cr);
-        let canvas = ChafaCanvas::new(width as u32, height as u32);
+        let canvas = ChafaCanvas::from_term(img.width(), img.height());
         let pixels = img.to_rgba8();
 
         let out = canvas.draw(&pixels, img.width(), img.height());
