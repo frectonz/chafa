@@ -9,14 +9,8 @@
         flake-utils.follows = "flake-utils";
       };
     };
-    crane = {
-      url = "github:ipetkov/crane";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
   };
-  outputs = { self, nixpkgs, flake-utils, rust-overlay, crane }:
+  outputs = { self, nixpkgs, flake-utils, rust-overlay }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         overlays = [ (import rust-overlay) ];
@@ -24,33 +18,21 @@
           inherit system overlays;
         };
 
-        craneLib = crane.lib.${system};
-        src = craneLib.cleanCargoSource ./.;
-
-        commonArgs = { inherit src; };
-
-        cargoArtifacts = craneLib.buildDepsOnly commonArgs;
-        bin = craneLib.buildPackage (commonArgs // {
-          inherit cargoArtifacts;
-        });
+        essentials = with pkgs; [
+          glib
+          chafa
+          freetype
+          pkg-config
+        ];
       in
       with pkgs;
       {
-        packages = {
-          inherit bin;
-          default = bin;
-        };
 
         devShells.default = mkShell.override { stdenv = clangStdenv; } {
-          buildInputs = [
+          buildInputs = essentials ++ [
             rust-bin.stable.latest.default
             rust-analyzer
             nil
-
-            glib
-            chafa
-            freetype
-            pkg-config
 
             dune_3
             ocaml
